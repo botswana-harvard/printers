@@ -52,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'apps.edc_printers.urls'
+ROOT_URLCONF = 'edc_printers.urls'
 
 TEMPLATES = [
     {
@@ -70,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'apps.edc_printers.wsgi.application'
+WSGI_APPLICATION = 'edc_printers.wsgi.application'
 
 
 # Database
@@ -121,3 +121,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'edc_printers', 'static')
+GIT_DIR = BASE_DIR
+CRISPY_TEMPLATE_PACK = 'bootstrap3'

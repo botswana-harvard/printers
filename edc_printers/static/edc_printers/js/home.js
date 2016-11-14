@@ -1,7 +1,7 @@
 function edcPrintersReady() {
 	
 		var post = $.ajax({
-		//url: Urls['edc-label:home_url'](),
+		url: Urls['edc-label:home_url'](),
 		type: 'GET',
 		dataType: 'json',
 		contentType: 'application/json',
@@ -19,9 +19,9 @@ function updatePage( data ) {
 	var print_server = JSON.parse( data.print_server );
 	var printers = JSON.parse( data.printers );
 
-	$( "#div-printers-panel" ).text( 'Printers@' + data.default_cups_server_ip );
+	//$( "#div-printers-panel" ).text( 'Printers@' + data.default_cups_server_ip );
 
-	updateLabelTemplates( label_templates );
+	//updateLabelTemplates( label_templates );
 	//updatePrinters( printers, data.default_printer_label );
 
 	//$( "#alert-print-server-wait" ).hide();

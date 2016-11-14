@@ -4,11 +4,14 @@
 
 {% block extra-scripts %}
     <script type="text/javascript" charset="utf8" src="{% static "edc_printers/js/home.js" %}"></script>
+      $(document).ready( function () {
+        edcPrintersReady("{{ print_server|escapejs }}", "{{ printers|escapejs }}", "{{ default_cups_server_ip|escapejs }}");
+      })
 {% endblock extra-scripts %}
 
+{% block main %}
 	<div class="container">
 		
 
 	</div> <!-- main container -->
-
-{% block main %}
+{% endblock main %}
